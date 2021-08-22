@@ -1,15 +1,16 @@
 ﻿package main
 
 import (
-	. "github.com/lliryc/memego/graph"
 	"fmt"
 	"math/rand"
+	"github.com/lliryc/memego/graph"
+	"github.com/lliryc/memego/common"
 )
 
-func fullConnectedGraph(n int) ([] Vertex, map[string]map[string]float32){
-	vertices := make([]Vertex, n)
+func fullConnectedGraph(n int) ([] graph.Vertex, map[string]map[string]float32){
+	vertices := make([]graph.Vertex, n)
 	for i,_ := range vertices {
-		vertices[i] = Vertex{Id: fmt.Sprintf("%d",i)}
+		vertices[i] = graph.Vertex{Id: fmt.Sprintf("%d",i)}
 	}
 	adjMap := make(map[string]map[string]float32) 
 	for i := 0; i < n-1; i++ {
@@ -25,11 +26,11 @@ func fullConnectedGraph(n int) ([] Vertex, map[string]map[string]float32){
 func main() {
 	const vNum = 5
 	vertices, adjMap := fullConnectedGraph(vNum)	
-	generator := GraphGenerator{Vertices: vertices, AdjMap: adjMap}
-	policy := TspPolicy {VerticesNum: vNum }
+	generator := graph.GraphGenerator{Vertices: vertices, AdjMap: adjMap}
+	policy := graph.TspPolicy {VerticesNum: vNum }
 	firstGen := generator.Create(&policy)
-	sim := 	memego.Simulation {Generation: firstGen}
-	res := sim.Run(5, &policy).(Path)
+	sim := 	common.Simulation {Generation: firstGen}
+	res := sim.Run(5, &policy).(graph.Path)
 	fmt.Printf("Best route is:")
 	for _, v := range res.Vertices{
 		fmt.Printf("%s", v.Id)
