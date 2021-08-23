@@ -1,0 +1,6 @@
+github.com/lliryc/memego v0.0.0-20210822191047-2efc078a39dd h1:NYhxwrAuxcTXTvQkWswPq+OqK0iQiSMIgDxCb/t+V4c=
+github.com/lliryc/memego v0.0.0-20210822191047-2efc078a39dd/go.mod h1:nwdR6/3ImUsnKZnbfCXiKKv9aiGhBSWjFKqWuD0FFyE=
+github.com/lliryc/memego-common v0.0.0-20210822192906-37b209f1c820 h1:iX+sHd2M5DAN+Cnh/PId/6ynmetL9pHmm4aApiH+WVQ=
+github.com/lliryc/memego-common v0.0.0-20210822192906-37b209f1c820/go.mod h1:IB/VkvN0FxeAD+uiLoBph/0vFqO2gWXjvvlv1vSmseM=
+github.com/lliryc/memego-graph v0.0.0-20210822193421-1d4f3f5847ba h1:lIGs66JeMRZ/GG1FkJAAhcHYIvm6o+9MH8osO0EMZ2s=
+github.com/lliryc/memego-graph v0.0.0-20210822193421-1d4f3f5847ba/go.mod h1:ZfsljzieuJHM7cr5wu7AzHYugFIpZmzwXVzoTJRclP8=
