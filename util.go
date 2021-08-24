@@ -6,7 +6,7 @@ import (
 	"math/rand"
 )
 
-func fullConnectedGraph(n int) ([] graph.Vertex, map[string]map[string]float32){
+func FullConnectedGraph(n int) ([] graph.Vertex, map[string]map[string]float32){
 	vertices := make([]graph.Vertex, n)
 	for i,_ := range vertices {
 		vertices[i] = graph.Vertex{Id: fmt.Sprintf("%d",i)}
